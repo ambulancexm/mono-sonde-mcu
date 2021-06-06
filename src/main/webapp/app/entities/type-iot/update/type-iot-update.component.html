@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-type-iot-heading" data-cy="TypeIotCreateUpdateHeading" jhiTranslate="objetConnecteIotApp.typeIot.home.createOrEditLabel">
+        Create or edit a Type Iot
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="objetConnecteIotApp.typeIot.id" for="field_id">Id</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="objetConnecteIotApp.typeIot.name" for="field_name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="objetConnecteIotApp.typeIot.iot" for="field_iot">Iot</label>
+          <select class="form-control" id="field_iot" data-cy="iot" name="iot" formControlName="iot">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="iotOption.id === editForm.get('iot')!.value?.id ? editForm.get('iot')!.value : iotOption"
+              *ngFor="let iotOption of iotsSharedCollection; trackBy: trackIotById"
+            >
+              {{ iotOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

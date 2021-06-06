@@ -1,0 +1,26 @@
+{
+  "objetConnecteIotApp": {
+    "iot": {
+      "home": {
+        "title": "Iots",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Iot",
+        "createOrEditLabel": "Create or edit a Iot",
+        "notFound": "No Iots found"
+      },
+      "created": "A new Iot is created with identifier {{ param }}",
+      "updated": "A Iot is updated with identifier {{ param }}",
+      "deleted": "A Iot is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Iot {{ id }}?"
+      },
+      "detail": {
+        "title": "Iot"
+      },
+      "id": "Id",
+      "mac": "Mac",
+      "sensor": "Sensor",
+      "typeIot": "Type Iot"
+    }
+  }
+}

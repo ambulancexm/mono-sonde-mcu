@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mono-sonde-mcu": {
+    "objet-connecte-iot": {
       "root": "",
       "sourceRoot": "src/main/webapp",
       "projectType": "application",
@@ -66,12 +66,12 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "mono-sonde-mcu:build",
+            "browserTarget": "objet-connecte-iot:build",
             "proxyConfig": "./webpack/proxy.conf.js"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mono-sonde-mcu:build:production"
+              "browserTarget": "objet-connecte-iot:build:production"
             }
           }
         },
@@ -93,7 +93,7 @@
       "prefix": "jhi"
     }
   },
-  "defaultProject": "mono-sonde-mcu",
+  "defaultProject": "objet-connecte-iot",
   "cli": {
     "packageManager": "npm"
   }

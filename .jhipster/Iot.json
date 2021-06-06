@@ -1,0 +1,37 @@
+{
+  "name": "Iot",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "mac",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "sensor",
+      "otherEntityRelationshipName": "iot",
+      "relationshipName": "sensor"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "typeIot",
+      "otherEntityRelationshipName": "iot",
+      "relationshipName": "typeIot"
+    }
+  ],
+  "entityTableName": "iot",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["objetConnecteIot"],
+  "changelogDate": "20210606071335"
+}
