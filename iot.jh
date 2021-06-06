@@ -1,0 +1,47 @@
+
+application {
+  config {
+    baseName objetConnecteIot,
+    applicationType monolith,
+    packageName fr.thomas.iot,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework angular
+  }
+  entities *
+}
+
+entity Iot {
+	id Long,
+    mac String,
+}
+
+entity TypeIot{
+	id Long,
+    name String,
+}
+
+enum TypeSensor{
+	TEMP, ALTITUDE
+}
+
+entity Sensor{
+	id Long,
+    typeSensor TypeSensor,
+    value Double,
+}
+
+
+
+relationship ManyToOne{
+	TypeIot to Iot
+    Iot to Sensor
+}
+
+service Iot, Sensor with serviceClass
+
+dto Iot, Sensor with mapstruct
+
+
+
+    

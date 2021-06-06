@@ -1,0 +1,36 @@
+{
+  "name": "Sensor",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "typeSensor",
+      "fieldType": "TypeSensor",
+      "fieldValues": "TEMP,ALTITUDE"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "iot",
+      "otherEntityRelationshipName": "sensor",
+      "relationshipName": "iot"
+    }
+  ],
+  "entityTableName": "sensor",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["objetConnecteIot"],
+  "changelogDate": "20210606071337"
+}

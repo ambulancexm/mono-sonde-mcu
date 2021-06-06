@@ -1,0 +1,9 @@
+{
+  "objetConnecteIotApp": {
+    "TypeSensor": {
+      "null": "",
+      "TEMP": "TEMP",
+      "ALTITUDE": "ALTITUDE"
+    }
+  }
+}

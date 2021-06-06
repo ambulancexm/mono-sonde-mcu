@@ -1,0 +1,25 @@
+{
+  "objetConnecteIotApp": {
+    "typeIot": {
+      "home": {
+        "title": "Type Iots",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Type Iot",
+        "createOrEditLabel": "Create or edit a Type Iot",
+        "notFound": "No Type Iots found"
+      },
+      "created": "A new Type Iot is created with identifier {{ param }}",
+      "updated": "A Type Iot is updated with identifier {{ param }}",
+      "deleted": "A Type Iot is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Type Iot {{ id }}?"
+      },
+      "detail": {
+        "title": "Type Iot"
+      },
+      "id": "Id",
+      "name": "Name",
+      "iot": "Iot"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="iot">
+      <h2 data-cy="iotDetailsHeading"><span jhiTranslate="objetConnecteIotApp.iot.detail.title">Iot</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="objetConnecteIotApp.iot.id">Id</span></dt>
+        <dd>
+          <span>{{ iot.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="objetConnecteIotApp.iot.mac">Mac</span></dt>
+        <dd>
+          <span>{{ iot.mac }}</span>
+        </dd>
+        <dt><span jhiTranslate="objetConnecteIotApp.iot.sensor">Sensor</span></dt>
+        <dd>
+          <div *ngIf="iot.sensor">
+            <a [routerLink]="['/sensor', iot.sensor?.id, 'view']">{{ iot.sensor?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/iot', iot.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
